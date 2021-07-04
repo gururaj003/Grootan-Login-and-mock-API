@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login and register.css">
+</head>
+<body>
+    <div class="login_page">
+        <div class="form">
+            <h1 class="label">User Login</h1>
+            <form class="register-form" >
+                <h1 class="label">User Login</h1>
+                <input type="text" placeholder="User Name">
+                <input type="password" placeholder="Password">
+                <input type="email" placeholder="User email">
+                <button type="button">Register</button>
+                <p class="message">Already Registered ?<a href="#"> LOGIN HERE</a></p>
+            </form>
+
+            <form class="login-form" action="home.html" method="POST" name="form" onsubmit="return validated()">
+                <div class="font">Email / Phone</div>
+                <input  autocomplete="off" type="text" name="email" placeholder="Enter Your Email or Phone Number">
+                <div id="email_error">Please fill your Email or Phone Number</div>
+                <div class="font">Password</div>
+                <input type="password" name="password" placeholder="Enter Your Password">
+                <p>Note: Password should contian more than 8 characters</p>
+                <div id="pass_error">Please enter your Password</div>
+                <button type="submit">Login</button>
+                <p class="message">Not Registered? <a href="#"> REGISTER HERE</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="validate.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js">
+    </script>
+    <script>
+        $('.message a').click(function()
+        {
+            $('form').animate({height:"toggle",opacity:"toggle"}, "slow");
+        });
+    </script>
+</body>
+</html>
